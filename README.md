@@ -13,6 +13,13 @@ tags:
 
 An **OpenEnv-compatible** environment where an AI agent receives customer support tickets and must **classify**, **prioritize**, and optionally **draft a reply**. The environment exposes Pydantic v2 models for observations, actions, and rewards, and includes a fully deterministic grader.
 
+**🔗 Live Demo:** [Visit on Hugging Face](https://huggingface.co/spaces/Praneelpandey/SupportENV)
+
+<img width="750"  alt="Screenshot1" src="https://github.com/user-attachments/assets/d1916c26-930b-482d-9b4e-fca8fd356032" />
+<br><br>
+<img width="750" alt="Screenshot2" src="https://github.com/user-attachments/assets/18e34334-8cbb-4e92-9e34-b5b419d55914" />
+
+
 ---
 
 ## Environment Overview
