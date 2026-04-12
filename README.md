@@ -66,7 +66,7 @@ The agent processes one support ticket per episode. Depending on the task diffic
 - **0.5** × category match + **0.5** × priority match.
 
 ### Task 3 — `resolve`
-- **0.3** × category match + **0.3** × priority match + **0.4** × reply quality.
+- **0.3** × category match + **0.3** × priority match + **0.4** × reply quality .
 - Reply quality = proportion of 5 ideal keywords found in the reply, scaled by 0.4.
 - **−0.1 penalty** if the reply is empty or under 10 words.
 
