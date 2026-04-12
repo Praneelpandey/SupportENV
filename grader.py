@@ -87,6 +87,6 @@ def grade(
         raise ValueError(f"Unknown task: {task_name!r}")
 
     # Clamp to [0.0, 1.0]
-    score = max(0.0, min(1.0, score))
+    score = max(0.01, min(0.99, score))
     breakdown["total"] = score
     return score, breakdown
