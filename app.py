@@ -67,6 +67,7 @@ def get_tickets():
 
 
 @app.route("/api/reset", methods=["POST"])
+@app.route("/reset", methods=["POST"])
 def reset_env():
     """Reset the environment with an optional task_name."""
     data = request.get_json(silent=True) or {}
@@ -101,6 +102,7 @@ def reset_env():
 
 
 @app.route("/api/step", methods=["POST"])
+@app.route("/step", methods=["POST"])
 def step_env():
     """Submit an action and get the result."""
     data = request.get_json(silent=True) or {}
@@ -141,6 +143,7 @@ def step_env():
 
 
 @app.route("/api/state", methods=["GET"])
+@app.route("/state", methods=["GET"])
 def get_state():
     """Return current environment state."""
     return jsonify(env.state())

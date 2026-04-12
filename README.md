@@ -131,14 +131,27 @@ Scores will vary depending on the random ticket selection per episode.
 
 ```
 SupportENV/
-├── environment.py   # SupportEnv class + Pydantic models
-├── tasks.py         # Task configs + 30 sample tickets
-├── grader.py        # Deterministic scoring function
-├── inference.py     # LLM agent loop (9 episodes)
-├── openenv.yaml     # OpenEnv manifest
-├── Dockerfile       # Container setup
-└── README.md        # This file
+├── app.py             # Flask server (web UI + REST API)
+├── environment.py     # SupportEnv class + Pydantic models
+├── tasks.py           # Task configs + 30 sample tickets
+├── grader.py          # Deterministic scoring function
+├── inference.py       # LLM agent loop (9 episodes)
+├── openenv.yaml       # OpenEnv manifest
+├── templates/
+│   └── index.html     # Interactive web dashboard
+├── static/            # Legacy static assets
+├── Dockerfile         # Container setup
+├── requirements.txt   # Python dependencies
+└── README.md          # This file
 ```
+
+## API Endpoints
+
+| Method | Path | Description |
+|---|---|---|
+| `POST` | `/reset` | Start a new episode (accepts `task_name` in JSON body) |
+| `POST` | `/step` | Submit an action (`category`, `priority`, `reply`) |
+| `GET` | `/state` | Get current environment state |
 
 ---
 

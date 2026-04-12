@@ -1,14 +1,23 @@
-name: supportenv
-version: "1.0.0"
-description: "Customer support ticket triage environment"
-tags: [openenv, nlp, customer-support]
+version: "1.0"
+name: "supportenv"
+description: "Customer support ticket triage environment — classify, prioritize, and resolve real customer tickets. Built for the Meta × Hugging Face OpenEnv Hackathon."
+tags: [openenv, nlp, customer-support, triage]
 tasks:
-  - name: classify
-    difficulty: easy
-  - name: prioritize
-    difficulty: medium
-  - name: resolve
-    difficulty: hard
+  - id: "classify"
+    name: "Classify"
+    description: "Categorize the ticket as billing, technical, or general."
+    difficulty: "easy"
+    grader: "grader:grade"
+  - id: "prioritize"
+    name: "Prioritize"
+    description: "Classify the ticket and assign a priority level."
+    difficulty: "medium"
+    grader: "grader:grade"
+  - id: "resolve"
+    name: "Resolve"
+    description: "Full triage: classify, prioritize, and draft a customer reply."
+    difficulty: "hard"
+    grader: "grader:grade"
 observation_space:
   ticket_id: str
   ticket_text: str
