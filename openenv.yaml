@@ -1,0 +1,21 @@
+name: supportenv
+version: "1.0.0"
+description: "Customer support ticket triage environment"
+tags: [openenv, nlp, customer-support]
+tasks:
+  - name: classify
+    difficulty: easy
+  - name: prioritize
+    difficulty: medium
+  - name: resolve
+    difficulty: hard
+observation_space:
+  ticket_id: str
+  ticket_text: str
+  task_name: str
+  step_number: int
+action_space:
+  category: str
+  priority: str
+  reply: str
+reward_range: [0.0, 1.0]
