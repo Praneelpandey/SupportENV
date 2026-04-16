@@ -11,7 +11,7 @@ tags:
 
 # SupportEnv — Customer Support Ticket Triage
 
-An **OpenEnv-compatible** environment where an AI agent receives customer support tickets and must **classify**, **prioritize**, and optionally **draft a reply**. The environment exposes Pydantic v2 models for observations, actions, and rewards, and includes a fully deterministic grader.
+An **OpenEnv-compatible** environment where an AI agent receives customer support tickets and must **classify**, **prioritize**, and optionally **draft a reply**. The environment exposes Pydantic v2 models for observations, actions, and rewards, and includes a fully deterministic grader .
 
 **🔗 Live Demo:** [Visit on Hugging Face](https://huggingface.co/spaces/Praneelpandey/SupportENV)
 
